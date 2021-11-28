@@ -4,53 +4,53 @@ const beautify = require('gulp-beautify')
 const webServer = require('gulp-webserver')
 const sass = require('gulp-sass')(require('sass'))
 
-function cleandoc() {
-  return del(['doc'])
+function cleandocs() {
+  return del(['docs'])
 }
 
-function copyStaticTodoc() {
-  return src(['src/static/**/*.*']).pipe(dest('doc' + '/static/'))
+function copyStaticTodocs() {
+  return src(['src/static/**/*.*']).pipe(dest('docs' + '/static/'))
 }
 
-function copyHtmlTodoc() {
+function copyHtmlTodocs() {
   return src(['src/*.html'])
     .pipe(beautify.html({ indent_size: 4, preserve_newlines: false }))
-    .pipe(dest('doc'))
+    .pipe(dest('docs'))
 }
 
-function copyJsTodoc() {
-  return src(['src/js/**/*.js']).pipe(dest('doc' + '/js/'))
+function copyJsTodocs() {
+  return src(['src/js/**/*.js']).pipe(dest('docs' + '/js/'))
 }
 
-function copyScssTodoc() {
+function copyScssTodocs() {
   return src(['src/scss/**/*.scss'])
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('doc' + '/css/'))
+    .pipe(dest('docs' + '/css/'))
 }
 
 function watchFiles() {
-  watch('src/js/**/*', copyJsTodoc)
-  watch('src/scss/**/*', copyScssTodoc)
-  watch('src/*', copyHtmlTodoc)
+  watch('src/js/**/*', copyJsTodocs)
+  watch('src/scss/**/*', copyScssTodocs)
+  watch('src/*', copyHtmlTodocs)
 }
 
 function webServerStart() {
-  return src('doc').pipe(
+  return src('docs').pipe(
     webServer({
       port: 8000,
       livereload: true,
       directoryListing: false,
       open: true,
-      fallback: './doc/index.html',
+      fallback: './docs/index.html',
     }),
   )
 }
 
-exports.build = series(cleandoc, copyHtmlTodoc, copyStaticTodoc)
+exports.build = series(cleandocs, copyHtmlTodocs, copyStaticTodocs)
 exports.default = series(
-  copyStaticTodoc,
-  copyHtmlTodoc,
-  copyJsTodoc,
-  copyScssTodoc,
+  copyStaticTodocs,
+  copyHtmlTodocs,
+  copyJsTodocs,
+  copyScssTodocs,
   parallel(watchFiles, webServerStart),
 )
