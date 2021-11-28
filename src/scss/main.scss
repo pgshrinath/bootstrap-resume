@@ -1,0 +1,215 @@
+$primary-color: #4581f6;
+$secondary-color: #002265;
+$tertiary-color: #07253c;
+$text-color: #14279b;
+
+
+@font-face {
+    font-family:  'Poppins';
+    src: url('../static/font/Poppins-Regular.ttf');
+}
+
+body{
+    background: url('../static/images/Background.svg')  no-repeat !important;
+    font-family: 'Poppins', monospace,sans-serif;
+    font-weight: 300;
+}
+
+.navbar{
+    .navbar-brand{
+        color: $secondary-color;
+        width: 65%;
+        .inital{
+            color: $text-color !important; 
+        }
+    }
+    .navbar-toggler {
+        border-color: #ffff;
+    }
+    @media only screen and (min-width: 600px) {
+        .contactme{
+            background-color: $primary-color;
+            color: #ffff !important;
+            border-radius: 10px;
+        }
+    }
+}
+.container{
+    .row{
+        .card-section{
+           
+        .card{
+            width: 30%;
+            box-shadow: 0px 5px 26px 5px rgba(0, 0, 0, 0.17);
+            border-radius: 13px;
+            .card-img-top{
+                padding-top: 1rem;
+                height: 159px;
+                left: 101px;
+                top: 757px;
+            }
+        }
+       
+       }
+       @media (max-width: 767px) {
+        .card-section {
+          flex-direction: column;
+          .card{
+              width: 85%;
+          }
+        }
+        .contact-section {
+            flex-direction: column;
+            height: 900px;
+            padding: 0 0 60px 0;
+            justify-content: center;
+            align-items: center;
+            .contactimage{
+                height: 220px;
+            }
+            }
+            .footer-section{
+                height: auto !important;
+            }
+      }
+        .developer-img-div{
+            display: flex;
+            justify-content: center;
+        }
+        .contact-tittle{
+            font-size: 35px;
+            line-height: 52px;
+            letter-spacing: 0.055em;
+            color: $text-color;
+            span{
+                color: $secondary-color;
+                font-weight: bold;
+            }
+        }
+        .section-tittle{
+            font-size: 25px;
+            line-height: 37px;
+            letter-spacing: 0.055em;
+            color: $text-color;
+            span{
+                color: $secondary-color;
+            }
+        }
+        .hitext{
+            border: 1px solid #000000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 35px !important;
+        line-height: 52px;
+        letter-spacing: 0.005em;
+        color: $secondary-color;
+        
+        }
+    
+        .desciptiondiv{
+            font-size: 23px;
+    line-height: 34px;
+    letter-spacing: 0.015em;
+
+    color: #082032;
+        }
+        @media only screen and (max-width: 600px) {
+            .hitext{  
+                font-size: 30px !important;
+            }
+            .desciptiondiv{
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+        .contactimage{
+            width: 166px;
+            height: 160px;
+            align-items:  center;
+            .up{
+               position:absolute;
+                width: 100px;
+                height: 100px;
+                left: 115px;
+                top: 25px;
+               z-index: 2;
+            }
+            .down{
+                position:absolute;
+                width: 166px;
+                height: 160px;
+                z-index: 1;
+            }
+        }
+        .contacttext{
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 52px;
+            letter-spacing: 0.055em;
+        }
+        
+        .footer-section{
+            height: 400px;
+            background: url(../static/images/wave.svg) no-repeat;
+            background-size: 100%;
+            background-position: bottom;
+            margin-top: 50px;
+            .contact{
+                background: url(../static/images/Vector.svg) no-repeat;
+                background-size: 100%;
+                background-position: center;
+                width: 166px;
+                height: 160px;
+            }
+            .designby{
+                font-size: 1.563rem;
+            }
+        }
+        
+    
+        
+    }
+
+}
+.portfolio{
+    .card{
+        padding: .5rem;
+    }
+
+    .sendpay-section 
+        {
+            background-image: url(../static/images/Ellipse-6.svg) no-repeat !important;
+            background-position: 20px 20px;
+            background-size: 70% 70%;
+        h4{
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 30px;
+            color: #6c63ff;
+            align-self: flex-start;   
+        }
+    }
+    .ecommerce-section{
+        background-image: url(../static/images/Ellipse-6.svg) no-repeat !important;
+            background-position: 20px 20px;
+            background-size: 70% 70%;
+        color: #4581F6;
+        line-height:0;
+        h4{
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 25px;
+        }
+    }
+    .beatslearning-section{
+        background-image: url(../static/images/Ellipse-8.svg) no-repeat !important;
+            background-position: 20px 20px;
+            background-size: 70% 70%;
+        color: #5F596E;
+        line-height:0;
+        h4{
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 25px;
+        }
+    }
+}

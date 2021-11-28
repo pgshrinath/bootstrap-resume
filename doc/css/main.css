@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../static/font/Poppins-Regular.ttf");
+}
+body {
+  background: url("../static/images/Background.svg") no-repeat !important;
+  font-family: "Poppins", monospace, sans-serif;
+  font-weight: 300;
+}
+
+.navbar .navbar-brand {
+  color: #002265;
+  width: 65%;
+}
+.navbar .navbar-brand .inital {
+  color: #14279b !important;
+}
+.navbar .navbar-toggler {
+  border-color: #ffff;
+}
+@media only screen and (min-width: 600px) {
+  .navbar .contactme {
+    background-color: #4581f6;
+    color: #ffff !important;
+    border-radius: 10px;
+  }
+}
+
+.container .row .card-section .card {
+  width: 30%;
+  box-shadow: 0px 5px 26px 5px rgba(0, 0, 0, 0.17);
+  border-radius: 13px;
+}
+.container .row .card-section .card .card-img-top {
+  padding-top: 1rem;
+  height: 159px;
+  left: 101px;
+  top: 757px;
+}
+@media (max-width: 767px) {
+  .container .row .card-section {
+    flex-direction: column;
+  }
+  .container .row .card-section .card {
+    width: 85%;
+  }
+  .container .row .contact-section {
+    flex-direction: column;
+    height: 900px;
+    padding: 0 0 60px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .row .contact-section .contactimage {
+    height: 220px;
+  }
+  .container .row .footer-section {
+    height: auto !important;
+  }
+}
+.container .row .developer-img-div {
+  display: flex;
+  justify-content: center;
+}
+.container .row .contact-tittle {
+  font-size: 35px;
+  line-height: 52px;
+  letter-spacing: 0.055em;
+  color: #14279b;
+}
+.container .row .contact-tittle span {
+  color: #002265;
+  font-weight: bold;
+}
+.container .row .section-tittle {
+  font-size: 25px;
+  line-height: 37px;
+  letter-spacing: 0.055em;
+  color: #14279b;
+}
+.container .row .section-tittle span {
+  color: #002265;
+}
+.container .row .hitext {
+  border: 1px solid #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 35px !important;
+  line-height: 52px;
+  letter-spacing: 0.005em;
+  color: #002265;
+}
+.container .row .desciptiondiv {
+  font-size: 23px;
+  line-height: 34px;
+  letter-spacing: 0.015em;
+  color: #082032;
+}
+@media only screen and (max-width: 600px) {
+  .container .row .hitext {
+    font-size: 30px !important;
+  }
+  .container .row .desciptiondiv {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.container .row .contactimage {
+  width: 166px;
+  height: 160px;
+  align-items: center;
+}
+.container .row .contactimage .up {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 115px;
+  top: 25px;
+  z-index: 2;
+}
+.container .row .contactimage .down {
+  position: absolute;
+  width: 166px;
+  height: 160px;
+  z-index: 1;
+}
+.container .row .contacttext {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 52px;
+  letter-spacing: 0.055em;
+}
+.container .row .footer-section {
+  height: 400px;
+  background: url(../static/images/wave.svg) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  margin-top: 50px;
+}
+.container .row .footer-section .contact {
+  background: url(../static/images/Vector.svg) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 166px;
+  height: 160px;
+}
+.container .row .footer-section .designby {
+  font-size: 1.563rem;
+}
+
+.portfolio .card {
+  padding: 0.5rem;
+}
+.portfolio .sendpay-section {
+  background-image: url(../static/images/Ellipse-6.svg) no-repeat !important;
+  background-position: 20px 20px;
+  background-size: 70% 70%;
+}
+.portfolio .sendpay-section h4 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #6c63ff;
+  align-self: flex-start;
+}
+.portfolio .ecommerce-section {
+  background-image: url(../static/images/Ellipse-6.svg) no-repeat !important;
+  background-position: 20px 20px;
+  background-size: 70% 70%;
+  color: #4581F6;
+  line-height: 0;
+}
+.portfolio .ecommerce-section h4 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+}
+.portfolio .beatslearning-section {
+  background-image: url(../static/images/Ellipse-8.svg) no-repeat !important;
+  background-position: 20px 20px;
+  background-size: 70% 70%;
+  color: #5F596E;
+  line-height: 0;
+}
+.portfolio .beatslearning-section h4 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+}
